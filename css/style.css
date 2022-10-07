@@ -1,0 +1,577 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/*
+ 
+  font-family: 'Handlee', cursive;
+  font-family: 'Montserrat', sans-serif;
+  color_principal; #fa573a;
+  color_azul: #21242e;
+
+  */
+
+html {
+    /* para generar animaciones por css en los enlaces de ancla*/
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --margingrid: 1em;
+    --fontsize: 1em;
+    --anchomaximo: 68.75em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+
+
+/* inicio  header */
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 1.25em 0em;
+}
+
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    text-decoration: none;
+}
+
+header .nav-top a i {
+    color: var(--colorprincipal);
+    font-size: 120%;
+}
+
+header .nav-top a span {
+    color: white;
+    display: none;
+}
+
+header nav {
+    background-color: white;
+    padding: 1.25em;
+}
+
+header nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+header nav .container .logo {
+    max-width: 6.25em;
+}
+
+header nav .container .hamburguesa {
+    width: 1.875em;
+    cursor: pointer;
+}
+
+header nav .container .hamburguesa>div {
+    border-top: 1px solid #aaa;
+    margin-bottom: 0.625em;
+
+}
+
+header nav .container .menu {
+    width: 100%;
+    text-align: center;
+}
+
+header nav .container .menu li a {
+    display: block;
+    padding: 1.25em;
+    text-decoration: none;
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .container .menu li:last-child a {
+    border: 0px;
+}
+
+header nav .container .menu li :is(a:hover, .activo) {
+    color: var(--colorprincipal)
+}
+
+
+/* fin  header */
+
+/* inicio footer */
+
+
+footer {
+    background-color: var(--colorsecundario);
+    padding: 1.25em 0em;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: var(--colorprincipal);
+}
+
+/* fin footer */
+
+.flecha a {
+    display: block;
+    color: var(--colorprincipal);
+    position: fixed;
+    bottom: 1.25em;
+    right: 0.25em;
+    font-size: 300%;
+}
+
+
+/* inicio hero */
+
+.hero {
+    background-image: url('../images/fondo.jpg');
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-color: #999;
+    background-blend-mode: multiply;
+    color: white;
+    display: flex;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.hero h1 {
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+}
+
+.hero h2 {
+    color: var(--colorprincipal);
+    font-size: 1.25em;
+    margin: var(--margingrid) 0;
+}
+
+.hero p {
+    font-size: 1.15em;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--colorprincipal);
+    color: white;
+    text-decoration: none;
+    padding: 1.15em;
+    margin: var(--margingrid) 0;
+    border: 1px solid var(--colorprincipal);
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--colorprincipal)
+}
+
+.boton:hover i {
+    transition: 0.5s;
+    transform: translateX(5px) scale(1.10);
+}
+
+.hero ul {
+    display: flex;
+    width: 10em;
+    justify-content: space-between;
+}
+
+.hero ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+/* fin hero */
+
+/* inicio ourservices */
+
+main section {
+    padding: 2.125em 1.5em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
+
+
+main section .underline {
+    position: relative;
+    width: 6.250em;
+    margin: 0 auto;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    text-align: center;
+}
+
+main section .underline span {
+    position: absolute;
+    top: -0.4em;
+}
+
+main section .underline hr {
+    border-color: var(--colorprincipal);
+}
+
+main section .grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section .grid article {
+    width: 100%;
+    border-bottom: 1px solid lightslategray;
+    padding: 1.5em 0;
+}
+
+main section article>div .fa-solid {
+    border: 1px solid var(--colorprincipal);
+    padding: 0.75em;
+    color: var(--colorprincipal);
+    font-size: 120%;
+}
+
+main section article h3 {
+    font-weight: 700;
+    font-size: 110%;
+    margin: 0.625em 0em;
+}
+
+main p {
+    color: #666;
+    line-height: 1.25;
+    font-size: 95%;
+
+}
+
+main section article p {
+    margin-bottom: 0.5em;
+}
+
+main section article a {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+.fa-truck {
+    transform: rotateY(180deg)
+}
+
+/* final ourservices */
+/*inicio about us*/
+main #aboutus {
+    margin-bottom: 4.375em;
+}
+
+main section .flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5em;
+}
+
+main section .flex h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main section .flex h4 {
+    color: var(--colorprincipal);
+    margin: var(--margingrid);
+}
+
+main section .flex .imagen {
+    width: 95%;
+    margin: 2.5em auto;
+}
+
+main section .flex .imagen .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main section .flex .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main section .flex .imagen:hover :is(.marco, .marco img) {
+    transform: rotateZ(0deg)
+}
+
+/*fin about us*/
+/*comienzo our blogs*/
+main #ourblogs {
+    margin-bottom: 4.375em
+}
+
+main #ourblogs .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2.5em;
+}
+
+main #ourblogs .flex article {
+    width: 45%;
+
+}
+
+main #ourblogs .flex article img {
+    width: 90%;
+    margin: 2.5em auto;
+    margin-left: 0;
+}
+
+
+main #ourblogs .flex h2 {
+    font-weight: 400;
+    font-size: 110%;
+    font-family: var(--fuenteprincipal);
+    margin: var(--margingrid);
+    margin-left: 0;
+    text-align: left;
+}
+
+main #ourblogs .flex h3 {
+    color: var(--colorprincipal);
+    font-family: var(--fuenteprincipal);
+    font-weight: 700;
+    font-size: 80%;
+    padding-bottom: 1em;
+
+}
+
+main #ourblogs .flex p {
+    padding-bottom: 0.8em;
+
+}
+
+/*ourblogs fin*/
+/*todays menu comienzo*/
+main .menu {
+    margin-bottom: 4.375em;
+    background-color: var(--colorsecundario);
+}
+
+main .menu h2 {
+    color: white;
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+    text-align: center;
+
+
+}
+
+
+main #opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main #opciones ol {
+    padding: 1.5em;
+}
+
+main aside #opciones .boton {
+    padding: 0.5em;
+    margin: 0.1em;
+    margin-left: 0.5em;
+    width: 30em;
+    border-radius: 5px;
+    background-color: var(--colorsecundario);
+    border: 0;
+
+}
+
+main aside #opciones .boton:hover {
+    background-color: var(--colorprincipal);
+    color: white
+}
+
+main .comida {}
+
+main #offers h2 {
+    font-family: var(--fuenteprincipal);
+    text-align: left;
+    font-size: 90%;
+    font-weight: bold;
+    padding-bottom: 0.3em;
+}
+
+main #offers hr {
+    background-color: var(--colorprincipal);
+    border: none;
+    height: 0.1em;
+    width: 4em;
+    float: left;
+}
+
+main #offers p {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    text-align: left;
+    color: white;
+    font-size: 80%;
+}
+
+main .comida {}
+
+main .comida article figure {}
+
+main .comida article figure img {
+    padding: 1.5em;
+    padding-left: 0;
+    width: 100%;
+}
+
+main .comida article h2 {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fuenteprincipal);
+    font-weight: bold;
+    text-align: left;
+
+}
+
+main .comida article p {
+    padding-top: 0.9em;
+    padding-bottom: 1em;
+    color: white;
+    font-size: 80%;
+}
+
+main .comida article a {
+    border: 1px solid var(--colorprincipal);
+    padding-top: 1em;
+    padding-left: 0;
+    color: var(--colorprincipal);
+    font-size: 80%;
+    border: none
+}
+
+
+
+/* mediasqueries */
+
+@media(min-width: 37.5em) {
+
+    /* 600px tablet */
+    main section .grid article {
+        width: 50%;
+        border-bottom: 0;
+        border-left: 1px solid lightslategrey;
+        padding: 1.5em;
+        margin-top: 1em;
+    }
+
+    main section .grid article:last-child {
+        width: 100%;
+    }
+
+    main section .flex {
+        flex-direction: row;
+    }
+
+    main section .flex .imagen {
+        margin: 0 2.5em;
+    }
+
+    main #ourblogs .flex article {
+        width: 43%;
+
+    }
+
+}
+
+@media(min-width: 48em) {
+    main section .grid :is(article, article:last-child) {
+        width: 33.333%;
+    }
+
+    /* 768px tablet grande o pantalla pequeña */
+    header .nav-top a span {
+        display: inline;
+    }
+
+    footer {
+        text-align: left;
+    }
+
+    main #ourblogs .flex article {
+        width: 33.333%;
+
+    }
+
+}
+
+@media(min-width: 62.75em) {
+    /* 1004px pantallas  */
+
+    header nav .container .hamburguesa {
+        display: none;
+    }
+
+    header nav .container .menu {
+        width: auto;
+        text-align: left;
+    }
+
+    header nav .container .menu li a {
+        padding: 0em 1.25em;
+        border-bottom: 0px;
+    }
+
+    header nav .container .menu li {
+        display: inline-block;
+    }
+
+}
